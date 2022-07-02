@@ -31,14 +31,14 @@ public class Left_side extends javax.swing.JPanel {
     private void box(){
         menulist.removeAll();
     for (int i =0; i<10; i++){
-        menulist.add(new Item_people("Box " +i), " wrap");
+        menulist.add(new Item_people("Box " + i), "wrap");
     }
     redeem();
     } 
       private void pep(){
           menulist.removeAll();
     for (int i =0; i<7; i++){
-        menulist.add(new Item_people("People " +i), " wrap");
+        menulist.add(new Item_people("People " + i), " wrap");
     }
     redeem();
       }
@@ -70,7 +70,7 @@ public class Left_side extends javax.swing.JPanel {
         menu.setBackground(new java.awt.Color(232, 232, 232));
         menu.setLayout(new javax.swing.BoxLayout(menu, javax.swing.BoxLayout.X_AXIS));
 
-        box.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-box-30_1.png"))); // NOI18N
+        box.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-box-30.png"))); // NOI18N
         box.setIconSelected(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-box-30.png"))); // NOI18N
         box.setIconsimple(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-box-30_1.png"))); // NOI18N
         box.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -85,9 +85,9 @@ public class Left_side extends javax.swing.JPanel {
         });
         menu.add(box);
 
-        mess.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-topic-30_1.png"))); // NOI18N
         mess.setIconSelected(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-topic-30.png"))); // NOI18N
         mess.setIconsimple(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-topic-30_1.png"))); // NOI18N
+        mess.setSelected(true);
         mess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 messActionPerformed(evt);
@@ -122,7 +122,7 @@ public class Left_side extends javax.swing.JPanel {
         );
         menulistLayout.setVerticalGroup(
             menulistLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 387, Short.MAX_VALUE)
+            .addGap(0, 411, Short.MAX_VALUE)
         );
 
         sp.setViewportView(menulist);

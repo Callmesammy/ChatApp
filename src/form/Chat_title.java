@@ -34,7 +34,7 @@ public class Chat_title extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 36, Short.MAX_VALUE)
+            .addGap(0, 35, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
