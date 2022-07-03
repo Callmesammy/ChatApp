@@ -30,21 +30,21 @@ public class Left_side extends javax.swing.JPanel {
     }
     private void box(){
         menulist.removeAll();
-    for (int i =0; i<10; i++){
+    for (int i =0; i<11; i++){
         menulist.add(new Item_people("Box " + i), "wrap");
     }
     redeem();
     } 
       private void pep(){
           menulist.removeAll();
-    for (int i =0; i<7; i++){
+    for (int i =0; i<17; i++){
         menulist.add(new Item_people("People " + i), " wrap");
     }
     redeem();
       }
       private void mess(){
           menulist.removeAll();
-    for (int i =0; i<5; i++){
+    for (int i =0; i<8; i++){
         menulist.add(new Item_people("Message " +i), " wrap");
     }
     redeem();
@@ -68,7 +68,7 @@ public class Left_side extends javax.swing.JPanel {
         setBackground(new java.awt.Color(242, 242, 242));
 
         menu.setBackground(new java.awt.Color(232, 232, 232));
-        menu.setLayout(new javax.swing.BoxLayout(menu, javax.swing.BoxLayout.X_AXIS));
+        menu.setLayout(new java.awt.GridLayout(1, 3));
 
         box.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-box-30.png"))); // NOI18N
         box.setIconSelected(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-box-30.png"))); // NOI18N
