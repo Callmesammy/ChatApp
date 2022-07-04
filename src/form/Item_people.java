@@ -38,7 +38,7 @@ public class Item_people extends javax.swing.JPanel {
         imageAvatar1 = new swing.ImageAvatar();
         ib = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(242, 242, 242));
+        setBackground(new java.awt.Color(232, 232, 232));
 
         imageAvatar1.setBorderSize(0);
         imageAvatar1.setImage(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-user-45.png"))); // NOI18N
@@ -61,7 +61,8 @@ public class Item_people extends javax.swing.JPanel {
             .addComponent(imageAvatar1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(ib, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(ib, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
     }// </editor-fold>//GEN-END:initComponents
 

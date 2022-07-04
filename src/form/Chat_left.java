@@ -1,29 +1,24 @@
 
 package form;
 
-import java.awt.Color;
 
-/**
- *
- * @author user
- */
-public class Chat_right extends javax.swing.JLayeredPane {
+public class Chat_left extends javax.swing.JLayeredPane {
 
     
-    public Chat_right() {
+    public Chat_left() {
         initComponents();
     }
+    
+    public void setTeext(String text){
+        txt.setTeext(text);
+    }
 
-  public void setText(String text){
-      txt.setText(text);
-      txt.setBackground(new Color(12643830));
-      
-  }
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txt = new form.Chat_item();
+        txt = new form.Chattitle();
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -45,6 +40,6 @@ public class Chat_right extends javax.swing.JLayeredPane {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private form.Chat_item txt;
+    private form.Chattitle txt;
     // End of variables declaration//GEN-END:variables
 }
