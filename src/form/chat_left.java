@@ -7,16 +7,14 @@ import java.awt.Color;
  *
  * @author user
  */
-public class chat_user extends javax.swing.JLayeredPane {
+public class chat_left extends javax.swing.JLayeredPane {
 
     
-    public chat_user() {
+    public chat_left() {
         initComponents();  
         txt.setBackground(new Color(242,242,242));
     }
     
-    public void username(String name){
-    }
     public void setText(String text){
         txt.setText(text);
         txt.setTime("01:30pm");

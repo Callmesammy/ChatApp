@@ -7,6 +7,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.border.EmptyBorder;
@@ -27,6 +28,17 @@ public class Chat_item extends javax.swing.JLayeredPane {
         txt.setText(text);
     }
     
+    public void username (String name){
+         JLayeredPane layer = new JLayeredPane();
+        layer.setLayout(new FlowLayout(FlowLayout.LEFT, 0,0));
+        layer.setBorder(new EmptyBorder(0, 5, 10, 5));
+        JButton cms = new JButton(name);
+        cms.setContentAreaFilled(false);
+        cms.setFocusable(false);
+        layer.add(cms);
+        add(layer); 
+        
+    }
     public void setTime (String time){
         JLayeredPane layer = new JLayeredPane();
         layer.setLayout(new FlowLayout(FlowLayout.RIGHT, 0,0));

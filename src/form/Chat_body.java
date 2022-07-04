@@ -7,6 +7,7 @@ package form;
 import java.awt.Color;
 import javax.swing.JScrollBar;
 import net.miginfocom.swing.MigLayout;
+import swing.ScrollBar;
 
 
 public class Chat_body extends javax.swing.JPanel {
@@ -20,11 +21,64 @@ public class Chat_body extends javax.swing.JPanel {
         addTextRight("Is your security info still accurate?\n" +
 "We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
                 + "or alert you if there's ever a problem with your account.");
+        
+        
+          addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
+                + "or to save longer notes filled with checklists, images, web links, "
+                + "scanned documents, handwritten notes, or sketches. And with");
+        addTextRight("Is your security info still accurate?\n" +
+"We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
+                + "or alert you if there's ever a problem with your account.");  addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
+                + "or to save longer notes filled with checklists, images, web links, "
+                + "scanned documents, handwritten notes, or sketches. And with");
+        addTextRight("Is your security info still accurate?\n" +
+"We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
+                + "or alert you if there's ever a problem with your account.");  addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
+                + "or to save longer notes filled with checklists, images, web links, "
+                + "scanned documents, handwritten notes, or sketches. And with");
+        addTextRight("Is your security info still accurate?\n" +
+"We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
+                + "or alert you if there's ever a problem with your account.");  addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
+                + "or to save longer notes filled with checklists, images, web links, "
+                + "scanned documents, handwritten notes, or sketches. And with");
+        addTextRight("Is your security info still accurate?\n" +
+"We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
+                + "or alert you if there's ever a problem with your account.");  addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
+                + "or to save longer notes filled with checklists, images, web links, "
+                + "scanned documents, handwritten notes, or sketches. And with");
+        addTextRight("Is your security info still accurate?\n" +
+"We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
+                + "or alert you if there's ever a problem with your account.");  addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
+                + "or to save longer notes filled with checklists, images, web links, "
+                + "scanned documents, handwritten notes, or sketches. And with");
+        addTextRight("Is your security info still accurate?\n" +
+"We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
+                + "or alert you if there's ever a problem with your account.");  addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
+                + "or to save longer notes filled with checklists, images, web links, "
+                + "scanned documents, handwritten notes, or sketches. And with");
+        addTextRight("Is your security info still accurate?\n" +
+"We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
+                + "or alert you if there's ever a problem with your account.");  addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
+                + "or to save longer notes filled with checklists, images, web links, "
+                + "scanned documents, handwritten notes, or sketches. And with");
+        addTextRight("Is your security info still accurate?\n" +
+"We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
+                + "or alert you if there's ever a problem with your account.");  addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
+                + "or to save longer notes filled with checklists, images, web links, "
+                + "scanned documents, handwritten notes, or sketches. And with");
+        addTextRight("Is your security info still accurate?\n" +
+"We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
+                + "or alert you if there's ever a problem with your account.");  addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
+                + "or to save longer notes filled with checklists, images, web links, "
+                + "scanned documents, handwritten notes, or sketches. And with");
+        addTextRight("Is your security info still accurate?\n" +
+"We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
+                + "or alert you if there's ever a problem with your account.");
     }
 
     private void init(){
-        body.setLayout(new MigLayout("fillx"));
-        sp.setVerticalScrollBar(new JScrollBar());
+        body.setLayout(new MigLayout("fillx", " ", "7[]7"));
+        sp.setVerticalScrollBar(new ScrollBar());
         sp.getVerticalScrollBar().setBackground(Color.WHITE);
     }
     

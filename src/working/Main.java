@@ -17,7 +17,7 @@ public class Main extends javax.swing.JFrame {
 
     
     private void init(){
-        setIconImage(new ImageIcon(getClass().getResource("/icon/instagram.png")).getImage());
+        setIconImage(new ImageIcon(getClass().getResource("/icon/text.png")).getImage());
         ComponentResizer com = new ComponentResizer();
         com.setSnapSize(new Dimension(10,10));
         com.setMinimumSize(new Dimension(800,500));
