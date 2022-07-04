@@ -34,7 +34,7 @@
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="form.Chat_item" name="txt">
+    <Component class="form.Chattitle" name="txt">
     </Component>
   </SubComponents>
 </Form>
