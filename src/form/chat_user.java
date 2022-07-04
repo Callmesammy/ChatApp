@@ -16,7 +16,7 @@ public class chat_user extends javax.swing.JLayeredPane {
     }
     
     public void username(String name){
-        username(name);
+       
     }
     public void setText(String text){
         txt.setText(text);
