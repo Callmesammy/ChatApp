@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package form;
 
 import java.awt.Color;
@@ -17,12 +14,10 @@ public class Chat_body extends javax.swing.JPanel {
     public Chat_body() {
         initComponents();
         init();
-        addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
-                + "or to save longer notes filled with checklists, images, web links, "
-                + "scanned documents, handwritten notes, or sketches. And with", "Jo00n", new ImageIcon(getClass().getResource("/TEST/5.jpg")));
+        addTextLeft("", "Jo00n", new ImageIcon(getClass().getResource("/TEST/5.jpg")));
         addTextRight("Is your security info still accurate?\n" +
 "We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
-                + "or alert you if there's ever a problem with your account.");
+                + "or alert you if there's ever a problem with your account.", "Iyaba", new ImageIcon(getClass().getResource("/TEST/4.jpg")));
         addDate("09/04/2022");
         
         
@@ -31,10 +26,10 @@ public class Chat_body extends javax.swing.JPanel {
                 + "scanned documents, handwritten notes, or sketches. And with", "Sam", new ImageIcon(getClass().getResource("/TEST/2.jpg")));
               addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
                 + "or to save longer notes filled with checklists, images, web links, "
-                + "scanned documents, handwritten notes, or sketches. And with", "Jojo", new ImageIcon(getClass().getResource("/TEST/4.jpg")));
+                + "scanned documents, handwritten notes, or sketches. And with", "Jojo", new ImageIcon(getClass().getResource("/TEST/4.jpg" )), new ImageIcon(getClass().getResource("/TEST/3.jpg")));
         addTextRight("Is your security info still accurate?\n" +
 "We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
-                + "or alert you if there's ever a problem with your account.");
+                + "or alert you if there's ever a problem with your account.", "Kenedim");
         
              addDate("09/04/2022");
         
@@ -48,7 +43,7 @@ public class Chat_body extends javax.swing.JPanel {
                 + "scanned documents, handwritten notes, or sketches. And with", "Jonny", new ImageIcon(getClass().getResource("/TEST/7.jpg")));
         addTextRight("Is your security info still accurate?\n" +
 "We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
-                + "or alert you if there's ever a problem with your account.");
+                + "or alert you if there's ever a problem with your account.", "Benzy", new ImageIcon(getClass().getResource("/TEST/4.jpg")),new ImageIcon(getClass().getResource("/TEST/7.jpg")));
         
              addDate("09/04/2022");
         
@@ -89,10 +84,15 @@ public class Chat_body extends javax.swing.JPanel {
         body.repaint();
         body.revalidate();
     }
-        private void addTextRight(String text){
+        private void addTextRight(String text, String cons, Icon ...image){
         Chat_right itm = new Chat_right();
         itm.setText(text);
+        itm.setImag(image);
+        itm.setSeen();
+        itm.setTime();
+        itm.setSeen();
         body.add(itm, "wrap, al right, w 100::75%");
+        itm.USERNM(cons);
         body.repaint();
         body.revalidate();
     }

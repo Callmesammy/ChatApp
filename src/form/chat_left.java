@@ -2,6 +2,7 @@
 package form;
 
 import java.awt.Color;
+import javax.swing.Icon;
 
 /**
  *
@@ -15,10 +16,25 @@ public class chat_left extends javax.swing.JLayeredPane {
         txt.setBackground(new Color(242,242,242));
     }
     
-    public void setText(String text){
-        txt.setText(text);
+  public void setText(String text){
+      if (txt.equals("")){
+          txt.hideText();
+      }else{
+            txt.setText(text);
+      }
+             }
+    
+   public void setImag (Icon ...image){
+       txt.setImage(false, image);
+   }
+    public void setTime(){
         txt.setTime("01:30pm");
+}
+    public void setSuccess(){
         txt.setsuccess();
+    }
+     public void usernameProfile(String name){
+        txt.usernameProfile(name);
     }
 
     @SuppressWarnings("unchecked")

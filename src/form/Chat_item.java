@@ -20,6 +20,7 @@ import javax.swing.border.EmptyBorder;
 
 public class Chat_item extends javax.swing.JLayeredPane {
 
+    private JButton cms, cmk;
     private  JLabel label;
     public Chat_item() {
         initComponents();
@@ -37,10 +38,10 @@ public class Chat_item extends javax.swing.JLayeredPane {
          JLayeredPane layer = new JLayeredPane();
         layer.setLayout(new FlowLayout(FlowLayout.LEFT, 0,0));
       // layer.setBorder(new EmptyBorder(3, 0, 10, 0));
-        JButton cms = new JButton(name);
+        cms = new JButton(name);
         cms.setContentAreaFilled(false);
         cms.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        cms.setForeground(new java.awt.Color(119, 196, 253));
+        cms.setForeground(new java.awt.Color(51, 165, 248));
         cms.setFont(new java.awt.Font("sansserif", 3, 13));
        txt.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 5, 10));
         cms.setFocusable(false);
@@ -54,15 +55,15 @@ public class Chat_item extends javax.swing.JLayeredPane {
          JLayeredPane layer = new JLayeredPane();
         layer.setLayout(new FlowLayout(FlowLayout.LEFT, 0,0));
       // layer.setBorder(new EmptyBorder(3, 0, 10, 0));
-        JButton cms = new JButton(cons);
-        cms.setContentAreaFilled(false);
-        cms.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        cms.setForeground(new java.awt.Color(8, 8, 8));
-        cms.setFont(new java.awt.Font("sansserif", 3, 13));
+        cmk = new JButton(cons);
+        cmk.setContentAreaFilled(false);
+        cmk.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        cmk.setForeground(new java.awt.Color(8, 8, 8));
+        cmk.setFont(new java.awt.Font("sansserif", 3, 13));
        txt.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 5, 10));
-        cms.setFocusable(false);
+        cmk.setFocusable(false);
       // txt.setBorder(new EmptyBorder(0, 0, 10, 0));
-        layer.add(cms);
+        layer.add(cmk);
         add(layer, 0); 
         
     }

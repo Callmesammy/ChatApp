@@ -37,7 +37,7 @@ public class Left_side extends javax.swing.JPanel {
     } 
       private void pep(){
           menulist.removeAll();
-    for (int i =0; i<17; i++){
+    for (int i =0; i<15; i++){
         menulist.add(new Item_people("People " + i), " wrap");
     }
     redeem();
@@ -167,6 +167,7 @@ public class Left_side extends javax.swing.JPanel {
         box.setSelected(false);
         mess.setSelected(false); 
         mess();
+   
     }//GEN-LAST:event_pepActionPerformed
  
     }
