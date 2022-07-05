@@ -5,6 +5,8 @@
 package form;
 
 import java.awt.Color;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JScrollBar;
 import net.miginfocom.swing.MigLayout;
 import swing.ScrollBar;
@@ -17,7 +19,7 @@ public class Chat_body extends javax.swing.JPanel {
         init();
         addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
                 + "or to save longer notes filled with checklists, images, web links, "
-                + "scanned documents, handwritten notes, or sketches. And with", "Jokn");
+                + "scanned documents, handwritten notes, or sketches. And with", "Jo00n", new ImageIcon(getClass().getResource("/TEST/5.jpg")));
         addTextRight("Is your security info still accurate?\n" +
 "We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
                 + "or alert you if there's ever a problem with your account.");
@@ -26,10 +28,10 @@ public class Chat_body extends javax.swing.JPanel {
         
           addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
                 + "or to save longer notes filled with checklists, images, web links, "
-                + "scanned documents, handwritten notes, or sketches. And with", "Sam");
+                + "scanned documents, handwritten notes, or sketches. And with", "Sam", new ImageIcon(getClass().getResource("/TEST/2.jpg")));
               addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
                 + "or to save longer notes filled with checklists, images, web links, "
-                + "scanned documents, handwritten notes, or sketches. And with", "Jojo");
+                + "scanned documents, handwritten notes, or sketches. And with", "Jojo", new ImageIcon(getClass().getResource("/TEST/4.jpg")));
         addTextRight("Is your security info still accurate?\n" +
 "We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
                 + "or alert you if there's ever a problem with your account.");
@@ -38,12 +40,12 @@ public class Chat_body extends javax.swing.JPanel {
         
           addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
                 + "or to save longer notes filled with checklists, images, web links, "
-                + "scanned documents, handwritten notes, or sketches. And with", "Sam");
+                + "scanned documents, handwritten notes, or sketches. And with", "Sam", new ImageIcon(getClass().getResource("/TEST/6.jpg")));
                addDate("09/04/2022");
         
         addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
                 + "or to save longer notes filled with checklists, images, web links, "
-                + "scanned documents, handwritten notes, or sketches. And with", "Jonny");
+                + "scanned documents, handwritten notes, or sketches. And with", "Jonny", new ImageIcon(getClass().getResource("/TEST/7.jpg")));
         addTextRight("Is your security info still accurate?\n" +
 "We just want to make sure this security info is up-to-date, so we can use it to verify your identity "
                 + "or alert you if there's ever a problem with your account.");
@@ -52,7 +54,7 @@ public class Chat_body extends javax.swing.JPanel {
         
           addTextLeft(" 23/05/2016 · ‎Notes is the best place to jot down quick thoughts "
                 + "or to save longer notes filled with checklists, images, web links, "
-                + "scanned documents, handwritten notes, or sketches. And with", "MOOn");
+                + "scanned documents, handwritten notes, or sketches. And with", "MOOn", new ImageIcon(getClass().getResource("/TEST/thumbnail.jpg")));
     
     }
 
@@ -61,9 +63,12 @@ public class Chat_body extends javax.swing.JPanel {
         sp.setVerticalScrollBar(new ScrollBar());
         sp.getVerticalScrollBar().setBackground(Color.WHITE);
     }
-      private void addTextLeft(String text, String name){
+      private void addTextLeft(String text, String name, Icon ...image){
         chat_user item = new chat_user();
         item.setText(text);
+        item.setImag(image);
+        item.setTime();
+        item.setSuccess();
         body.add(item, "wrap, w 100::75%");
         item.usernameProfile(name);
         body.repaint();

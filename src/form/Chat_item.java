@@ -2,10 +2,15 @@
 package form;
 
 import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.awt.RenderingHints;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -28,15 +33,37 @@ public class Chat_item extends javax.swing.JLayeredPane {
         txt.setText(text);
     }
     
-    public void username (String name){
+    public void usernameProfile (String name){
          JLayeredPane layer = new JLayeredPane();
         layer.setLayout(new FlowLayout(FlowLayout.LEFT, 0,0));
-        layer.setBorder(new EmptyBorder(0, 5, 10, 5));
+      // layer.setBorder(new EmptyBorder(3, 0, 10, 0));
         JButton cms = new JButton(name);
         cms.setContentAreaFilled(false);
+        cms.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        cms.setForeground(new java.awt.Color(119, 196, 253));
+        cms.setFont(new java.awt.Font("sansserif", 3, 13));
+       txt.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 5, 10));
         cms.setFocusable(false);
+      // txt.setBorder(new EmptyBorder(0, 0, 10, 0));
         layer.add(cms);
-        add(layer); 
+        add(layer, 0); 
+        
+    }
+    
+        public void USERRIGHT (String cons){
+         JLayeredPane layer = new JLayeredPane();
+        layer.setLayout(new FlowLayout(FlowLayout.LEFT, 0,0));
+      // layer.setBorder(new EmptyBorder(3, 0, 10, 0));
+        JButton cms = new JButton(cons);
+        cms.setContentAreaFilled(false);
+        cms.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        cms.setForeground(new java.awt.Color(8, 8, 8));
+        cms.setFont(new java.awt.Font("sansserif", 3, 13));
+       txt.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 5, 10));
+        cms.setFocusable(false);
+      // txt.setBorder(new EmptyBorder(0, 0, 10, 0));
+        layer.add(cms);
+        add(layer, 0); 
         
     }
     public void setTime (String time){
@@ -49,6 +76,17 @@ public class Chat_item extends javax.swing.JLayeredPane {
         layer.add(label);
         add(layer); 
     }
+    
+    public void setImage(boolean right, Icon ...image){
+        JLayeredPane layer = new JLayeredPane();
+        layer.setLayout(new FlowLayout(right? FlowLayout.RIGHT :FlowLayout.LEFT));
+        layer.setBorder(new EmptyBorder(0, 5, 0, 5));
+        Chatimage mage = new Chatimage(right);
+        mage.addImage(image);
+        layer.add(mage);
+        add(layer);
+    }
+
     public void setsuccess(){
         if (label != null){
             label.setIcon(new ImageIcon(getClass().getResource("/icon/ticc.png")));
@@ -59,7 +97,9 @@ public class Chat_item extends javax.swing.JLayeredPane {
             label.setIcon(new ImageIcon(getClass().getResource("/icon/doubleticcblu.png")));
         }
     }
-  
+   public void hideText(){
+        txt.setVisible(false);
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -85,4 +125,8 @@ public class Chat_item extends javax.swing.JLayeredPane {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private swing.JIMSendTextPane txt;
     // End of variables declaration//GEN-END:variables
+
+    void setImage(boolean b, String[] image) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
