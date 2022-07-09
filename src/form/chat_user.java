@@ -22,7 +22,7 @@ public class chat_user extends javax.swing.JLayeredPane {
     public void setImageprofile (Icon image){
         iamage.setImage(image);
     }
-    public void setText(String text){
+    public void setText(String text) {
       if (txt.equals("")){
           txt.hideText();
       }else{

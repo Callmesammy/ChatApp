@@ -41,9 +41,9 @@ public class Chat_item extends javax.swing.JLayeredPane {
         cms = new JButton(name);
         cms.setContentAreaFilled(false);
         cms.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        cms.setForeground(new java.awt.Color(51, 165, 248));
+        cms.setForeground(new java.awt.Color(74, 179, 255));
         cms.setFont(new java.awt.Font("sansserif", 3, 13));
-       txt.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 5, 10));
+       txt.setBorder(javax.swing.BorderFactory.createEmptyBorder(5, 10, 5, 10));
         cms.setFocusable(false);
       // txt.setBorder(new EmptyBorder(0, 0, 10, 0));
         layer.add(cms);
@@ -62,7 +62,7 @@ public class Chat_item extends javax.swing.JLayeredPane {
         cmk.setFont(new java.awt.Font("sansserif", 3, 13));
        txt.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 10, 5, 10));
         cmk.setFocusable(false);
-      // txt.setBorder(new EmptyBorder(0, 0, 10, 0));
+      //txt.setBorder(new EmptyBorder(0, 0, 10, 0));
         layer.add(cmk);
         add(layer, 0); 
         
