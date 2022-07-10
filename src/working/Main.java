@@ -1,8 +1,11 @@
 
 package working;
 
+import Event.EventImage;
+import Event.ImageEvent;
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import swing.ComponentResizer;
@@ -13,17 +16,31 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
         init();
+        
     }
 
-    
-    private void init(){
+        private void init(){
         setIconImage(new ImageIcon(getClass().getResource("/icon/text.png")).getImage());
         ComponentResizer com = new ComponentResizer();
         com.setSnapSize(new Dimension(10,10));
         com.setMinimumSize(new Dimension(800,500));
         com.registerComponent(this);
         com.setMaximumSize(Toolkit.getDefaultToolkit().getScreenSize());
+        view_image.setVisible(false);
+        home.setVisible(true);
         
+        initevent();
+        
+    }
+    
+    public void initevent(){
+        EventImage.install().addEventImage(new ImageEvent() {
+            @Override
+            public void picture(Icon image) {
+            view_image.viewImage(image);
+            }
+        });
+
     }
  
     @SuppressWarnings("unchecked")
@@ -36,7 +53,8 @@ public class Main extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLayeredPane1 = new javax.swing.JLayeredPane();
-        home2 = new form.Home();
+        view_image = new form.View_image();
+        home = new form.Home();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -82,7 +100,7 @@ public class Main extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(797, Short.MAX_VALUE)
+                .addContainerGap(820, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(8, 8, 8)
                 .addComponent(jButton2)
@@ -96,18 +114,23 @@ public class Main extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jLayeredPane1.setLayout(new java.awt.BorderLayout());
+        jLayeredPane1.setLayout(new java.awt.CardLayout());
+
+        view_image.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                view_imageMousePressed(evt);
+            }
+        });
+        jLayeredPane1.setLayer(view_image, javax.swing.JLayeredPane.POPUP_LAYER);
+        jLayeredPane1.add(view_image, "card3");
+        jLayeredPane1.add(home, "card2");
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
         backgroundLayout.setHorizontalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLayeredPane1)
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(home2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 874, Short.MAX_VALUE)
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,9 +138,7 @@ public class Main extends javax.swing.JFrame {
                 .addGap(0, 0, 0)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(home2, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout borderLayout = new javax.swing.GroupLayout(border);
@@ -146,27 +167,30 @@ public class Main extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
-    this.setLocation(this.getLocation().x + evt.getX() - pX,
-    this.getLocation().y + evt.getY() - pY);
+    private void jPanel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseEntered
+        pX = evt.getX();
+        pY = evt.getY();
+    }//GEN-LAST:event_jPanel2MouseEntered
 
+    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
+        this.setLocation(this.getLocation().x + evt.getX() - pX,
+            this.getLocation().y + evt.getY() - pY);
     }//GEN-LAST:event_jPanel2MouseDragged
 
-        private int pX;
-        private int pY;
-    private void jPanel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseEntered
-         pX = evt.getX();
-         pY = evt.getY();
-    }//GEN-LAST:event_jPanel2MouseEntered
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       System.exit(0);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    private void view_imageMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_view_imageMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_view_imageMousePressed
 
+        private int pX;
+        private int pY;
     /**
      * @param args the command line arguments
      */
@@ -205,10 +229,11 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
     private javax.swing.JPanel border;
-    private form.Home home2;
+    private form.Home home;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLayeredPane jLayeredPane1;
     private javax.swing.JPanel jPanel2;
+    private form.View_image view_image;
     // End of variables declaration//GEN-END:variables
 }

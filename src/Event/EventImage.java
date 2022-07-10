@@ -5,7 +5,8 @@ public class EventImage {
     
     private static EventImage instance;
     private ImageEvent picture;
-    private static EventImage install(){
+    
+    public static EventImage install(){
     if (instance == null){
         instance = new EventImage();
     }   
