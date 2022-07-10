@@ -36,6 +36,11 @@ public class Main extends javax.swing.JFrame {
     public void initevent(){
         EventImage.install().addEventImage(new ImageEvent() {
             @Override
+            public void save(Icon image) {
+                System.out.println("Image save...");
+            }
+            
+            @Override
             public void picture(Icon image) {
             view_image.viewImage(image);
             }
@@ -100,7 +105,7 @@ public class Main extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(820, Short.MAX_VALUE)
+                .addContainerGap(854, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(8, 8, 8)
                 .addComponent(jButton2)
@@ -115,13 +120,6 @@ public class Main extends javax.swing.JFrame {
         );
 
         jLayeredPane1.setLayout(new java.awt.CardLayout());
-
-        view_image.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                view_imageMousePressed(evt);
-            }
-        });
-        jLayeredPane1.setLayer(view_image, javax.swing.JLayeredPane.POPUP_LAYER);
         jLayeredPane1.add(view_image, "card3");
         jLayeredPane1.add(home, "card2");
 
@@ -130,7 +128,7 @@ public class Main extends javax.swing.JFrame {
         backgroundLayout.setHorizontalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 874, Short.MAX_VALUE)
+            .addComponent(jLayeredPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 908, Short.MAX_VALUE)
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -184,10 +182,6 @@ public class Main extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void view_imageMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_view_imageMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_view_imageMousePressed
 
         private int pX;
         private int pY;

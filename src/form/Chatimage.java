@@ -45,7 +45,14 @@ public class Chatimage extends javax.swing.JLayeredPane {
         });
    }
        
+   
         private Dimension getAutoSize(Icon image, int w, int h) {
+            if (w>image.getIconWidth()){
+            w = image.getIconWidth();
+        }
+        if (h>image.getIconHeight()){
+            h = image.getIconHeight();
+        }
         int iw = image.getIconWidth();
         int ih = image.getIconHeight();
         double xScale = (double) w / iw;
